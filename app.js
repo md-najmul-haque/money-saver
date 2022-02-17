@@ -1,12 +1,25 @@
 
-const incomeNegativeError = document.getElementById('income-error-text')
+const incomeNegativeError = document.getElementById('income-negative-error')
+const foodNegativeError = document.getElementById('food-negative-error')
+const rentNegativeError = document.getElementById('rent-negative-error')
+const chothesNegativeError = document.getElementById('clothes-negative-error')
 incomeNegativeError.style.display = 'none';
-const foodNegativeError = document.getElementById('food-error-text')
 foodNegativeError.style.display = 'none';
-const rentNegativeError = document.getElementById('rent-error-text')
 rentNegativeError.style.display = 'none';
-const chothesNegativeError = document.getElementById('clothes-error-text')
 chothesNegativeError.style.display = 'none';
+
+const incomeTextError = document.getElementById('income-text-error')
+const foodTextError = document.getElementById('food-text-error')
+const rentTextError = document.getElementById('rent-text-error')
+const clothesTextError = document.getElementById('clothes-text-error')
+incomeTextError.style.display = 'none';
+foodTextError.style.display = 'none';
+rentTextError.style.display = 'none';
+clothesTextError.style.display = 'none';
+
+const incomeExpenditureError = document.getElementById('income-expenditure-error')
+incomeExpenditureError.style.display = 'none'
+
 
 document.getElementById('calculate-button').addEventListener('click', function () {
 
@@ -26,13 +39,30 @@ document.getElementById('calculate-button').addEventListener('click', function (
     const clothesField = document.getElementById('clothes');
     const clothesCost = parseFloat(clothesField.value);
 
+
+
     // control negative input value
+
     if (income < 0) {
         incomeNegativeError.style.display = 'block';
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
         return;
     } else if (foodCost < 0) {
         foodNegativeError.style.display = 'block';
         incomeNegativeError.style.display = 'none';
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
         return;
 
 
@@ -40,6 +70,13 @@ document.getElementById('calculate-button').addEventListener('click', function (
         rentNegativeError.style.display = 'block';
         incomeNegativeError.style.display = 'none';
         foodNegativeError.style.display = 'none';
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
         return;
 
     } else if (clothesCost < 0) {
@@ -47,13 +84,101 @@ document.getElementById('calculate-button').addEventListener('click', function (
         incomeNegativeError.style.display = 'none';
         foodNegativeError.style.display = 'none';
         rentNegativeError.style.display = 'none';
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
         return;
     } else {
         incomeNegativeError.style.display = 'none';
         foodNegativeError.style.display = 'none';
         rentNegativeError.style.display = 'none';
         chothesNegativeError.style.display = 'none';
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
     }
+
+    // control string 
+    if (isNaN(income) == true) {
+        incomeTextError.style.display = 'block';
+
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
+        return;
+    } else if (isNaN(foodCost) == true) {
+
+        foodTextError.style.display = 'block';
+        incomeTextError.style.display = 'none';
+
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
+        return;
+
+    } else if (isNaN(rentCost) == true) {
+
+        rentTextError.style.display = 'block';
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
+        return;
+
+    } else if (isNaN(clothesCost) == true) {
+
+        clothesTextError.style.display = 'block';
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
+        return;
+    } else {
+
+        incomeTextError.style.display = 'none';
+        foodTextError.style.display = 'none';
+        rentTextError.style.display = 'none';
+        clothesTextError.style.display = 'none';
+
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+
+        incomeExpenditureError.style.display = 'none'
+
+    }
+
+
+
+    // control negative input value
+
+
 
     /*     if (income > 0 && foodCost >= 0 && rentCost >= 0 && clothesCost >= 0) {
     
@@ -75,6 +200,12 @@ document.getElementById('calculate-button').addEventListener('click', function (
 
     // get total cost and income balance 
     const totalCost = foodCost + rentCost + clothesCost;
+
+    if (income < totalCost) {
+        incomeExpenditureError.style.display = 'block'
+        return;
+    }
+
     const incomeBalance = income - totalCost;
 
     // set expence value
