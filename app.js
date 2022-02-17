@@ -14,14 +14,15 @@ document.getElementById('calculate-button').addEventListener('click', function (
     const clothesField = document.getElementById('clothes');
     const clothesCost = parseFloat(clothesField.value);
 
-    // calculation 
+    // get total cost and income balance 
     const totalCost = foodCost + rentCost + clothesCost;
     const incomeBalance = income - totalCost;
 
+    // set expence value
     const expense = document.getElementById('expense');
     expense.innerText = totalCost;
 
-
+    //set balance value
     balance.innerText = incomeBalance;
 
 })
@@ -34,14 +35,18 @@ document.getElementById('save-button').addEventListener('click', function () {
     const saveFiled = document.getElementById('save');
     const savingPercentage = parseFloat(saveFiled.value);
 
+    // getting earlier balance
     const totalBalance = parseFloat(balance.innerText);
+
+    // get savings
     const totalSaving = (totalBalance * savingPercentage) / 100;
 
+    // set saving amount
     const savingAmount = document.getElementById('saving-amount');
     savingAmount.innerText = totalSaving;
 
+    // get & set raimaining balance
     const remainingBalance = totalBalance - totalSaving;
-
     document.getElementById('remaining-balance').innerText = remainingBalance;
 
 })
