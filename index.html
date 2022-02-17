@@ -38,7 +38,7 @@
                     <h4 class="text-center">Income</h4>
                     <div class="text-center my-3">
                         <label for="income">Income:</label>
-                        <input type="text" name="income" id="income" value="20000">
+                        <input type="text" name="income" id="income" placeholder="Enter your income">
                     </div>
                     <h4 class="text-center mb-4">Expenses</h4>
                     <div class="d-flex justify-content-center">
@@ -46,17 +46,17 @@
 
                             <div class="mb-3">
                                 <label for="food">Food:</label>
-                                <input type="text" name="food" id="food" value="3500">
+                                <input type="text" name="food" id="food" placeholder="Enter your food cost">
                             </div>
 
                             <div class="mb-3">
                                 <label for="rent">Rent:</label>
-                                <input type="text" name="rent" id="rent" value="14500">
+                                <input type="text" name="rent" id="rent" placeholder="Enter your rent cost">
                             </div>
 
                             <div class="mb-3">
                                 <label for="clothes">Clothes:</label>
-                                <input type="text" name="clothes" id="clothes" value="500">
+                                <input type="text" name="clothes" id="clothes" placeholder="Enter your clothes cost">
                             </div>
 
                         </div>
@@ -65,17 +65,17 @@
                         <button id="calculate-button" class="btn btn-success">Calculate</button>
                     </div>
 
-                    <h4 class="text-center mb-4">Total Expenses: <span id="expense">18500</span></h4>
-                    <h4 class="text-center mb-3">Balance: <span id="balance">1500</span></h4>
+                    <h4 class="text-center mb-4">Total Expenses: <span id="expense">0</span></h4>
+                    <h4 class="text-center mb-3">Balance: <span id="balance">0</span></h4>
 
                     <div class="text-center">
                         <label for="Save">Save:</label>
-                        <input type="text" name="Save" id="save" value="5"> <span>%</span>
+                        <input type="text" name="Save" id="save" placeholder="Enter saving percentage"> <span>%</span>
                         <button id="save-button" class="btn btn-success">Save</button>
                     </div>
 
-                    <h4 class="text-center my-3">Saving Amount: <span id="saving-amount">1000</span></h4>
-                    <h4 class="text-center">Remaining Balance: <span id="remaining-balance">500</span></h4>
+                    <h4 class="text-center my-3">Saving Amount: <span id="saving-amount">0</span></h4>
+                    <h4 class="text-center">Remaining Balance: <span id="remaining-balance">0</span></h4>
                 </div>
             </div>
         </section>
@@ -125,6 +125,13 @@
             <h5 id="savings-error-message" class="text-danger text-center">The total savings can't exceed the total
                 balance.
                 Please reduce the saving percentage.</h5>
+
+            <h5 id="saving-negative-input" class="text-danger text-center">Saving percentage can't be negative.
+                Pls input positive value.
+            </h5>
+
+            <h5 id="saving-string-input" class="text-danger text-center">Saving percentage can't be invalid number.
+                Pls input valid number.</h5>
         </section>
     </main>
 

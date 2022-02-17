@@ -204,6 +204,11 @@ incomeExpenditureError.style.display = 'none'
 const savingsErrorMessage = document.getElementById('savings-error-message')
 savingsErrorMessage.style.display = 'none'
 
+const savingNegativeInput = document.getElementById('saving-negative-input')
+savingNegativeInput.style.display = 'none'
+
+const savingStringInput = document.getElementById('saving-string-input')
+savingStringInput.style.display = 'none'
 
 // add event handler on save button
 document.getElementById('save-button').addEventListener('click', function () {
@@ -235,6 +240,30 @@ document.getElementById('save-button').addEventListener('click', function () {
     const saveFiled = document.getElementById('save');
     const savingPercentage = parseFloat(saveFiled.value);
 
+    // error control for negative income input
+    if (savingPercentage < 0) {
+        savingNegativeInput.style.display = 'block';
+        savingStringInput.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        return;
+    } else {
+        savingNegativeInput.style.display = 'none';
+        savingStringInput.style.display = 'none'
+    }
+
+    // error control for string income input
+    if (isNaN(savingPercentage) == true) {
+
+        savingStringInput.style.display = 'block'
+        savingNegativeInput.style.display = 'none';
+        savingsErrorMessage.style.display = 'none'
+        return;
+    } else {
+        savingNegativeInput.style.display = 'none';
+        savingStringInput.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+    }
+
     // getting earlier balance
     const totalBalance = parseFloat(balance.innerText);
 
@@ -244,6 +273,7 @@ document.getElementById('save-button').addEventListener('click', function () {
 
     if (totalBalance < totalSaving) {
         savingsErrorMessage.style.display = 'block'
+
         return;
     } else {
         savingsErrorMessage.style.display = 'none'
