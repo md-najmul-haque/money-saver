@@ -25,6 +25,10 @@ document.getElementById('calculate-button').addEventListener('click', function (
         clothesTextError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
+
         return;
     } else if (foodCost < 0) {
         foodNegativeError.style.display = 'block';
@@ -36,6 +40,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         clothesTextError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
 
 
@@ -50,6 +57,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         clothesTextError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
 
     } else if (clothesCost < 0) {
@@ -64,6 +74,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         clothesTextError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
     } else {
         incomeNegativeError.style.display = 'none';
@@ -77,6 +90,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         clothesTextError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
     }
 
     // control string input
@@ -89,6 +105,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         chothesNegativeError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
     } else if (isNaN(foodCost) == true) {
 
@@ -101,6 +120,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         chothesNegativeError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
 
     } else if (isNaN(rentCost) == true) {
@@ -115,6 +137,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         chothesNegativeError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
 
     } else if (isNaN(clothesCost) == true) {
@@ -130,6 +155,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         chothesNegativeError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
         return;
     } else {
 
@@ -144,6 +172,9 @@ document.getElementById('calculate-button').addEventListener('click', function (
         chothesNegativeError.style.display = 'none';
 
         incomeExpenditureError.style.display = 'none'
+        savingsErrorMessage.style.display = 'none'
+        savingNegativeInput.style.display = 'none'
+        savingStringInput.style.display = 'none'
 
     }
 
@@ -173,9 +204,6 @@ function getIncome() {
     return income;
 
 }
-
-
-
 
 const balance = document.getElementById('balance');
 
