@@ -14,11 +14,17 @@ document.getElementById('calculate-button').addEventListener('click', function (
     const clothesField = document.getElementById('clothes');
     const clothesCost = parseFloat(clothesField.value);
 
+    // calculation 
+    const totalCost = foodCost + rentCost + clothesCost;
+    const incomeBalance = income - totalCost;
+
     const expense = document.getElementById('expense');
     const totalExpense = parseFloat(expense.innerText);
+    expense.innerText = totalCost;
 
     const balance = document.getElementById('balance');
     const totalBalance = parseFloat(balance.innerText);
+    balance.innerText = incomeBalance;
 
 
 
