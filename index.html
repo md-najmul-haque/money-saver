@@ -46,12 +46,12 @@
 
                             <div class="mb-3">
                                 <label for="food">Food:</label>
-                                <input type="text" name="food" id="food" value="4000">
+                                <input type="text" name="food" id="food" value="3500">
                             </div>
 
                             <div class="mb-3">
                                 <label for="rent">Rent:</label>
-                                <input type="text" name="rent" id="rent" value="15000">
+                                <input type="text" name="rent" id="rent" value="14500">
                             </div>
 
                             <div class="mb-3">
@@ -65,35 +65,42 @@
                         <button id="calculate-button" class="btn btn-success">Calculate</button>
                     </div>
 
-                    <h4 class="text-center mb-4">Total Expenses: <span id="expense">19500</span></h4>
-                    <h4 class="text-center mb-3">Balance: <span id="balance">500</span></h4>
+                    <h4 class="text-center mb-4">Total Expenses: <span id="expense">18500</span></h4>
+                    <h4 class="text-center mb-3">Balance: <span id="balance">1500</span></h4>
 
                     <div class="text-center">
                         <label for="Save">Save:</label>
-                        <input type="text" name="Save" id="save" value="10"> <span>%</span>
+                        <input type="text" name="Save" id="save" value="5"> <span>%</span>
                         <button id="save-button" class="btn btn-success">Save</button>
                     </div>
 
-                    <h4 class="text-center my-3">Saving Amount: <span id="saving-amount">50</span></h4>
-                    <h4 class="text-center">Remaining Balance: <span id="remaining-balance">450</span></h4>
+                    <h4 class="text-center my-3">Saving Amount: <span id="saving-amount">1000</span></h4>
+                    <h4 class="text-center">Remaining Balance: <span id="remaining-balance">500</span></h4>
                 </div>
             </div>
         </section>
 
+        <!-- error handling message  -->
         <section class="container mt-5">
 
 
-            <h5 id="income-negative-error" class="text-danger text-center">Note: Income will not be a negative amount.
-                Please
-                input correct income.</h5>
-            <h5 id="food-negative-error" class="text-danger text-center">Note: Food cost will not be a negative amount.
-                Please input correct food cost.</h5>
-            <h5 id="rent-negative-error" class="text-danger text-center">Note: Rent cost will not be a negative amount.
-                Please input correct rent cost.</h5>
-            <h5 id="clothes-negative-error" class="text-danger text-center">Note: Clothes cost will not be a negative
-                amount.
-                Please input correct clothes cost.
-            </h5>
+            <div>
+                <h5 id="income-negative-error" class="text-danger text-center">Note: Income will not be a negative
+                    amount.
+                    Please
+                    input correct income.</h5>
+                <h5 id="food-negative-error" class="text-danger text-center">Note: Food cost will not be a negative
+                    amount.
+                    Please input correct food cost.</h5>
+                <h5 id="rent-negative-error" class="text-danger text-center">Note: Rent cost will not be a negative
+                    amount.
+                    Please input correct rent cost.</h5>
+                <h5 id="clothes-negative-error" class="text-danger text-center">Note: Clothes cost will not be a
+                    negative
+                    amount.
+                    Please input correct clothes cost.
+                </h5>
+            </div>
 
 
             <div>
@@ -114,6 +121,10 @@
             <h5 id="income-expenditure-error" class="text-danger text-center">The total expense can't exceed the total
                 income.
                 Please give correct input or reduce cost.</h5>
+
+            <h5 id="savings-error-message" class="text-danger text-center">The total savings can't exceed the total
+                balance.
+                Please reduce the saving percentage.</h5>
         </section>
     </main>
 
