@@ -1,5 +1,17 @@
 
+const incomeNegativeError = document.getElementById('income-error-text')
+incomeNegativeError.style.display = 'none';
+const foodNegativeError = document.getElementById('food-error-text')
+foodNegativeError.style.display = 'none';
+const rentNegativeError = document.getElementById('rent-error-text')
+rentNegativeError.style.display = 'none';
+const chothesNegativeError = document.getElementById('clothes-error-text')
+chothesNegativeError.style.display = 'none';
+
 document.getElementById('calculate-button').addEventListener('click', function () {
+
+
+
     // get income =field
     const incomeField = document.getElementById('income');
     const income = parseFloat(incomeField.value);
@@ -13,6 +25,53 @@ document.getElementById('calculate-button').addEventListener('click', function (
 
     const clothesField = document.getElementById('clothes');
     const clothesCost = parseFloat(clothesField.value);
+
+    // control negative input value
+    if (income < 0) {
+        incomeNegativeError.style.display = 'block';
+        return;
+    } else if (foodCost < 0) {
+        foodNegativeError.style.display = 'block';
+        incomeNegativeError.style.display = 'none';
+        return;
+
+
+    } else if (rentCost < 0) {
+        rentNegativeError.style.display = 'block';
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        return;
+
+    } else if (clothesCost < 0) {
+        chothesNegativeError.style.display = 'block';
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        return;
+    } else {
+        incomeNegativeError.style.display = 'none';
+        foodNegativeError.style.display = 'none';
+        rentNegativeError.style.display = 'none';
+        chothesNegativeError.style.display = 'none';
+    }
+
+    /*     if (income > 0 && foodCost >= 0 && rentCost >= 0 && clothesCost >= 0) {
+    
+            const totalCost = foodCost + rentCost + clothesCost;
+    
+        } else {
+    
+            console.log("please input positive number")
+        }
+    
+        
+    
+        if (income > totalCost) {
+            const incomeBalance = income - totalCost;
+        } else {
+            console.log("total cost will not exceed total income")
+        }
+     */
 
     // get total cost and income balance 
     const totalCost = foodCost + rentCost + clothesCost;
