@@ -1,5 +1,5 @@
-# Money Master Assignment
+# Money Saver
 
-## [https://classroom.github.com/a/zFLvvYwR](https://classroom.github.com/a/zFLvvYwR)
+## [Live website link](https://najmul-bd.github.io/money-saver/)
 
-### Private Repo Link: [https://classroom.github.com/a/zFLvvYwR](https://classroom.github.com/a/zFLvvYwR)
+### [https://najmul-bd.github.io/money-saver/](https://najmul-bd.github.io/money-saver/)
