@@ -1,5 +1,5 @@
 # Money Saver
 
-## [Live website link](https://najmul-bd.github.io/money-saver/)
+## [Your Money Saver](https://yourmoneysaver.netlify.app/)
 
-### [https://najmul-bd.github.io/money-saver/](https://najmul-bd.github.io/money-saver/)
+### Live Website Link: [https://yourmoneysaver.netlify.app](https://yourmoneysaver.netlify.app)
